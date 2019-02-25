@@ -2,18 +2,7 @@ import { observable, action } from "mobx";
 import TodoModel from "./TodoModel";
 
 class TodoStore {
-  @observable todos = [
-    {
-      title: "Dog",
-      id: 100,
-      completed: true
-    },
-    {
-      title: "Cat",
-      id: 101,
-      completed: false
-    }
-  ];
+  @observable todos = [];
   lastId = 0;
 
   @action
