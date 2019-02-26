@@ -17,4 +17,4 @@ https://amirrahbaran.github.io/todo/
 
 * On the bottom right of the list, a <b>Clear completed</b> link should be located
 
-* when click on <b>Clear completed</b>, all completed items should be deleted
+* When click on <b>Clear completed</b>, all completed items should be deleted
