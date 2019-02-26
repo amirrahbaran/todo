@@ -10,7 +10,7 @@ class TodoItems extends Component {
       <section className="main">
         <ul className="todo-list">
           {todoStore.todos.map(todo => {
-            return <TodoItem todo={todo} />;
+            return <TodoItem key={todo.id} todo={todo} />;
           })}
         </ul>
       </section>

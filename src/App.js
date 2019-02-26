@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import TodoEntry from "./components/TodoEntry";
 import TodoItems from "./components/TodoItems";
+import TodoMenu from "./components/TodoMenu";
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
       <div id="todoapp" className="todoapp">
         <TodoEntry />
         <TodoItems />
+        <TodoMenu />
       </div>
     );
   }
