@@ -17,6 +17,11 @@ class TodoModel {
   toggle() {
     this.completed = !this.completed;
   }
+
+  @action
+  destroy() {
+    this.store.todos.remove(this);
+  }
 }
 
 export default TodoModel;

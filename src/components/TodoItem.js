@@ -7,10 +7,14 @@ class TodoItem extends Component {
     this.props.todo.toggle();
   };
 
+  onDestroy = () => {
+    this.props.todo.destroy();
+  };
+
   render() {
     const { todo } = this.props;
     return (
-      <li className={todo.completed ? "completed" : " "}>
+      <li id={todo.id} className={todo.completed ? "completed" : " "}>
         <div className="view">
           <input
             onChange={this.onToggle}
@@ -20,7 +24,7 @@ class TodoItem extends Component {
             checked={todo.completed}
           />
           <label>{todo.title}</label>
-          <button className="destory" />
+          <button onClick={this.onDestroy} className="destroy" />
         </div>
       </li>
     );
