@@ -8,7 +8,7 @@ https://amirrahbaran.github.io/todo/
 
 - [x] When I click on the right cross icon, then the todo-item should be deleted
 
-- [ ] On the bottom left of the list, the number of left undone items should be displayed (ie: <i>2 items left</i>)
+- [x] On the bottom left of the list, the number of left undone items should be displayed (ie: <i>2 items left</i>)
 
 - [ ] On the bottom middle of the list, three filtering options (<i>All, Active, Completed</i>) should be displayed:
     - [ ] <b>All:</b> All items should be displayed 
