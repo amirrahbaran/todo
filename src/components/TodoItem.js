@@ -14,7 +14,7 @@ class TodoItem extends Component {
   render() {
     const { todo } = this.props;
     return (
-      <li id={todo.id} className={todo.completed ? "completed" : " "}>
+      <li className={todo.completed ? "completed" : " "}>
         <div className="view">
           <input
             onChange={this.onToggle}
