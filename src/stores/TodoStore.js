@@ -10,7 +10,7 @@ class TodoStore {
     this.todos.push(new TodoModel(this, title, false, this.lastId++));
   }
 
-  @computed get activeTodoCount() {
+  @computed get undoneTodoCount() {
 		return this.todos.reduce(
 			(sum, todo) => sum + (todo.completed ? 0 : 1),
 			0
@@ -18,7 +18,7 @@ class TodoStore {
 	}
 
 	@computed get completedCount() {
-		return this.todos.length - this.activeTodoCount;
+		return this.todos.length - this.undoneTodoCount;
 	}
 }
 

@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 import {observer} from 'mobx-react';
 import todoStore from "../stores/TodoStore";
+let pluralize = require('pluralize')
 
 @observer
 class TodoMenu extends Component {
   render() {
-    if (!todoStore.activeTodoCount && !todoStore.completedCount) return null;
+    if (!todoStore.undoneTodoCount && !todoStore.completedCount) return null;
 
-    const activeTodoWord = (todoStore.activeTodoCount, "item");
+    const undoneTodoText = pluralize("item", todoStore.undoneTodoCount);
 
     return (
       <footer className="footer">
         <span className="todo-count">
-          <strong>{todoStore.activeTodoCount}</strong> {activeTodoWord} left
+          <strong>{todoStore.undoneTodoCount}</strong> {undoneTodoText} left
         </span>
         
       </footer>
