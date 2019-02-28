@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import TodoEntry from "./components/TodoEntry";
 import TodoItems from "./components/TodoItems";
 import TodoMenu from "./components/TodoMenu";
