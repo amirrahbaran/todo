@@ -9,7 +9,7 @@ class TodoItems extends Component {
     return (
       <section className="main">
         <ul className="todo-list">
-          {todoStore.todos.map(todo => {
+          {todoStore.getTodosByFilter().map(todo => {
             return <TodoItem key={todo.id} todo={todo} />;
           })}
         </ul>
