@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 class FilterLink extends Component {
   render() {
-    const isFilteredLink =
-      this.props.type.name === this.props.TodoStore.todoFilter;
+    const TodoStore = this.props.TodoStore;
+    const isFilteredLink = this.props.type.name === TodoStore.todoFilter;
     const isDefaultLink = this.props.type.default;
     const isLinkSelected = !isFilteredLink && isDefaultLink;
     return (
@@ -11,6 +11,7 @@ class FilterLink extends Component {
         <a
           href="#"
           className={isLinkSelected ? "selected" : ""}
+          onClick={() => TodoStore.todoFilterType("all")}
         >
           {this.props.type.label}
         </a>{" "}

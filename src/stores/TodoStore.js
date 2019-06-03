@@ -13,9 +13,15 @@ class TodoStore {
     this.todos.push(new TodoModel(this, title, false, this.lastId++));
   }
 
-  getTodosByFilter() {
+  @action
+  set todoFilterType(filterType) {
+    this.todoFilterType = filterType;
+  }
+
+  @computed
+  getfilteredTodos() {
     return this.todos.filter(todo => {
-      switch (this.todoFilter) {
+      switch (this.todoFilterType) {
         case FilteringTypes.DISPLAY_LEFT:
           return !todo.completed;
         case FilteringTypes.DISPLAY_DONE:
@@ -26,11 +32,13 @@ class TodoStore {
     });
   }
 
-  @computed get todoCount() {
+  @computed
+  get todoCount() {
     return this.todos.reduce((sum, todo) => sum + (todo.completed ? 0 : 1), 0);
   }
 
-  @computed get doneCount() {
+  @computed
+  get doneCount() {
     return this.todos.length - this.todoCount;
   }
 }
