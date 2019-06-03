@@ -4,11 +4,11 @@ let pluralize = require("pluralize");
 
 class TodoLeft extends Component {
   render() {
-    const { todoStore } = this.props;
-    const todoCountComplement = pluralize("item", todoStore.todoCount);
+    const { TodoStore } = this.props;
+    const todoCountComplement = pluralize("item", TodoStore.todoCount);
     return (
       <span className="todo-count">
-        <strong>{todoStore.todoCount}</strong> {todoCountComplement} left
+        <strong>{TodoStore.todoCount}</strong> {todoCountComplement} left
       </span>
     );
   }

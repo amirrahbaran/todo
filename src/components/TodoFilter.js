@@ -6,9 +6,9 @@ class TodoFilter extends Component {
   render() {
     return (
       <ul className="filters">
-        <FilterLink todoStore={this.props.todoStore} type={FilteringTypes.DISPLAY_ALL} />
-        <FilterLink todoStore={this.props.todoStore} type={FilteringTypes.DISPLAY_LEFT} />
-        <FilterLink todoStore={this.props.todoStore} type={FilteringTypes.DISPLAY_DONE} />
+        <FilterLink TodoStore={this.props.TodoStore} type={FilteringTypes.DISPLAY_ALL} />
+        <FilterLink TodoStore={this.props.TodoStore} type={FilteringTypes.DISPLAY_LEFT} />
+        <FilterLink TodoStore={this.props.TodoStore} type={FilteringTypes.DISPLAY_DONE} />
       </ul>
     );
   }

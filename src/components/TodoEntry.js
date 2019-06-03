@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import todoStore from "../stores/TodoStore";
 
 class TodoEntry extends Component {
+  TodoStore = this.props.TodoStore;
   state = {
     value: ""
   };
@@ -11,7 +11,7 @@ class TodoEntry extends Component {
       return;
     }
     event.preventDefault();
-    todoStore.addTodo(this.state.value);
+    this.TodoStore.addTodo(this.state.value);
     this.setState({
       value: ""
     });
