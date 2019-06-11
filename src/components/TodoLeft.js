@@ -1,14 +1,17 @@
 import React, { Component } from "react";
+import { inject, observer } from "mobx-react";
 
 let pluralize = require("pluralize");
 
+@inject("TodoStore")
+@observer
 class TodoLeft extends Component {
   render() {
     const { TodoStore } = this.props;
-    const todoCountComplement = pluralize("item", TodoStore.todoCount);
+    const todoCountComplement = pluralize("item", TodoStore.remaining);
     return (
       <span className="todo-count">
-        <strong>{TodoStore.todoCount}</strong> {todoCountComplement} left
+        <strong>{TodoStore.remaining}</strong> {todoCountComplement} left
       </span>
     );
   }

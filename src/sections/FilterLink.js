@@ -1,5 +1,8 @@
 import React, { Component } from "react";
+import { inject, observer } from "mobx-react";
 
+@inject("TodoStore")
+@observer
 class FilterLink extends Component {
   render() {
     const TodoStore = this.props.TodoStore;

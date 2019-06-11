@@ -12,9 +12,9 @@ class App extends Component {
 
     return (
       <div id="todoapp" className="todoapp">
-        <TodoEntry TodoStore={TodoStore}/>
+        <TodoEntry TodoStore={TodoStore} />
         <TodoItems TodoStore={TodoStore} />
-        <TodoMenu TodoStore={TodoStore}/>
+        <TodoMenu TodoStore={TodoStore} />
       </div>
     );
   }

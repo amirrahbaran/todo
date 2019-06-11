@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import TodoItem from "./TodoItem";
-import { observer } from "mobx-react";
+import { inject, observer } from "mobx-react";
 
+@inject("TodoStore")
 @observer
 class TodoItems extends Component {
-  TodoStore = this.props.TodoStore;
   render() {
+    const TodoStore = this.props.TodoStore;
+
     return (
       <section className="main">
         <ul className="todo-list">
-          {this.TodoStore.getfilteredTodos().map(todo => {
-            return <TodoItem key={todo.id} todo={todo} />;
+          {TodoStore.todosFiltered.map(todo => {
+            return <TodoItem key={todo.id} todo={todo} TodoStore={TodoStore}/>;
           })}
         </ul>
       </section>

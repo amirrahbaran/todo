@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import { observer } from "mobx-react";
+import { inject, observer } from "mobx-react";
 import TodoLeft from "./TodoLeft";
 import TodoFilter from "./TodoFilter";
 
+@inject("TodoStore")
 @observer
 class TodoMenu extends Component {
   render() {
     const TodoStore = this.props.TodoStore;
-    if (!TodoStore.todoCount && !TodoStore.completedCount) return null;
+    if (!TodoStore.todosCount && !TodoStore.todosCompletedCount) return null;
     return (
       <footer className="footer">
         <TodoLeft TodoStore={TodoStore} />
