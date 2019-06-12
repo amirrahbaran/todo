@@ -11,8 +11,8 @@ class TodoItems extends Component {
     return (
       <section className="main">
         <ul className="todo-list">
-          {TodoStore.todosFiltered.map(todo => {
-            return <TodoItem key={todo.id} todo={todo} TodoStore={TodoStore}/>;
+          {TodoStore.filteredListOfTodos.map(todo => {
+            return <TodoItem key={todo.id} todo={todo} />;
           })}
         </ul>
       </section>

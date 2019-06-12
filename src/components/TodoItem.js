@@ -1,12 +1,18 @@
 import React, { Component } from "react";
-import { inject, observer } from "mobx-react";
+import { observer } from "mobx-react";
 
-@inject("TodoStore")
 @observer
 class TodoItem extends Component {
+  onToggle = () => {
+    this.props.todo.toggle();
+  };
+
+  onDestroy = () => {
+    this.props.todo.destroy();
+  };
+
   render() {
     const todo = this.props.todo;
-    const TodoStore = this.props.TodoStore;
 
     return (
       <li key={todo.id} className={todo.completed ? "completed" : " "}>
@@ -14,13 +20,13 @@ class TodoItem extends Component {
           <input
             type="checkbox"
             className="toggle"
-            onChange={event => TodoStore.checkTodo(todo, event)}
+            onChange={this.onToggle}
             checked={todo.completed}
           />
           <label>{todo.title}</label>
           <button
             className="destroy"
-            onClick={event => TodoStore.deleteTodo(todo.id)}
+            onClick={this.onDestroy}
           />
         </div>
       </li>

@@ -8,7 +8,7 @@ import TodoFilter from "./TodoFilter";
 class TodoMenu extends Component {
   render() {
     const TodoStore = this.props.TodoStore;
-    if (!TodoStore.todosCount && !TodoStore.todosCompletedCount) return null;
+    if (!TodoStore.totalNumberOfTodos && !TodoStore.totalNumberOfCompletedTodos) return null;
     return (
       <footer className="footer">
         <TodoLeft TodoStore={TodoStore} />

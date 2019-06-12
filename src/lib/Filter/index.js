@@ -1,5 +1,5 @@
 export const FilteringTypes = {
-  DISPLAY_ALL: { name: "all", url: "all", label: "All", default: true },
-  DISPLAY_LEFT: { name: "left", url: "left", label: "Left", default: false },
-  DISPLAY_DONE: { name: "done", url: "done", label: "done", default: false }
+  DISPLAY_ALL: { name: "all", label: "All" },
+  DISPLAY_LEFT: { name: "active", label: "Active" },
+  DISPLAY_DONE: { name: "completed", label: "Completed" }
 };

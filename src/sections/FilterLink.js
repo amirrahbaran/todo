@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import * as classnames from "classnames";
 import { inject, observer } from "mobx-react";
 
 @inject("TodoStore")
@@ -6,20 +7,18 @@ import { inject, observer } from "mobx-react";
 class FilterLink extends Component {
   render() {
     const TodoStore = this.props.TodoStore;
-    const isFilteredLink = this.props.type.name === TodoStore.todoFilter;
-    const isDefaultLink = this.props.type.default;
-    const isLinkSelected = !isFilteredLink && isDefaultLink;
+    const filterName = this.props.type.name;
+    const filterLabel = this.props.type.label;
     return (
       <li>
-        <a
-          href="#"
-          className={isLinkSelected ? "selected" : ""}
-          onClick={() => TodoStore.todoFilterType("all")}
-        >
-          {this.props.type.label}
-        </a>{" "}
-      </li>
-    );
+      <a
+        onClick={() => TodoStore.setFilter(filterName)}
+        className={classnames({ selected: TodoStore.filter === filterName })}
+      >
+        {filterLabel}
+      </a>
+    </li>
+);
   }
 }
 

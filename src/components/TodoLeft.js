@@ -8,10 +8,10 @@ let pluralize = require("pluralize");
 class TodoLeft extends Component {
   render() {
     const { TodoStore } = this.props;
-    const todoCountComplement = pluralize("item", TodoStore.remaining);
+    const todoCountComplement = pluralize("item", TodoStore.totalNumberOfLeftoverTodos);
     return (
       <span className="todo-count">
-        <strong>{TodoStore.remaining}</strong> {todoCountComplement} left
+        <strong>{TodoStore.totalNumberOfLeftoverTodos}</strong> {todoCountComplement} left
       </span>
     );
   }
