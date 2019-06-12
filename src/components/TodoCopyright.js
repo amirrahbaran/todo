@@ -6,7 +6,7 @@ class TodoCopyright extends Component {
       <div className="info">
         <p>
           Created by{" "}
-          <a href="https://github.com/amirrahbaran" target="_blank">
+          <a href="https://github.com/amirrahbaran" target="_blank" rel="noopener noreferrer">
             Amir Reza Rahbaran
           </a>
         </p>

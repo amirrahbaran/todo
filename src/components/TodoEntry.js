@@ -22,7 +22,7 @@ class TodoEntry extends Component {
   render() {
     return (
       <header className="header">
-        <h1>todo</h1>
+        <h1>todos</h1>
         <input
           value={this.state.value}
           onChange={event => this.setState({ value: event.target.value })}
