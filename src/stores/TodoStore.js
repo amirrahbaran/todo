@@ -47,6 +47,10 @@ class TodoStore {
   get totalNumberOfLeftoverTodos() {
     return this.todos.filter(todo => !todo.completed).length;
   }
+
+  @action clearCompleted = () => {
+    this.todos = this.todos.filter(todo => !todo.completed);
+  };
 }
 
 const store = new TodoStore();

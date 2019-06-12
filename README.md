@@ -6,15 +6,17 @@ https://amirrahbaran.github.io/todo/
 
 ### Todos:
 
+- [x] When I hit "Enter" key, then the todo-item should be added to the list
+
 - [x] When I click on the right cross icon, then the todo-item should be deleted
 
-- [x] On the bottom left of the list, the number of left undone items should be displayed (ie: <i>2 items left</i>)
+- [x] On the bottom left of the list, the total number of leftover items should be displayed (ie: <i>2 items left</i>)
 
-- [x] On the bottom middle of the list, three filtering options (<i>All, Left, Done</i>) should be displayed:
+- [x] On the bottom middle of the list, three filtering options (<i>All, Active, Completed</i>) should be displayed:
     - [x] <b>All:</b> All items should be displayed 
-    - [x] <b>Active:</b> Only undone items should be displayed
-    - [x] <b>Done:</b> Only done items should be displayed
+    - [x] <b>Active:</b> Only leftover items should be displayed
+    - [x] <b>Completed:</b> Only completed items should be displayed
 
-- [ ] On the bottom right of the list, a <b>Clear done</b> link should be located
+- [x] On the bottom right of the list, a <b>Clear Completed</b> link should be located
 
-- [ ] When click on <b>Clear done</b>, all done items should be deleted
+- [x] When click on <b>Clear Completed</b>, all the completed items should be deleted at once
